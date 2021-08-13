@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Students</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+</head>
+  
+<body>
+    <div class="main-container">
+        <h1><b>STUDENTS DETAILS</b></h1>
+        <br><br>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">STUDENT ID</th>
+                <th scope="col">STUDENT NAME</th>
+                <th scope="col">GENDER</th>
+                <th scope="col">DATE OF BIRTH</th>
+                <th scope="col">CITY</th>
+                <th scope="col">STATE</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">QUALIFICATION</th>
+                <th scope="col">STREAM</th>
+            </tr>
+            </thead>  
+          
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                    <td>{{row['Student ID']}}</td>
+                    <td>{{row['Student Name']}}</td>
+                    <td>{{row['Gender']}}</td>
+                    <td>{{row['DateOfBirth']}}</td>
+                    <td>{{row['City']}}</td>
+                    <td>{{row['State']}}</td>
+                    <td>{{row['EmailId']}}</td>
+                    <td>{{row['Qualification']}}</td>
+                    <td>{{row['Stream']}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody> 
+          
+        </table>
+      
+        <div class="button-container">
+            <a href="/" class="btn btn-danger btnstyle">BACK</a>
+        </div>  
+    </div>
+
+    <style>
+        body {
+        font-family:  Georgia, serif;
+        background-image: linear-gradient(to right, rgba(245, 6, 193, 0.493), rgba(0, 247, 255, 0.719));
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .main-container{
+            width: 90%;
+            margin-top: 40px;
+        }
+        .button-container{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .btnstyle{
+            width: 100px;
+            margin: 20px;
+        }
+        h1{
+        text-align: center;
+        }
+    </style>
+  
+</body>
+</html>
+
+
+@CODED BY TSG405, 2021
